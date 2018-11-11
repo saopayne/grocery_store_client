@@ -2,6 +2,10 @@
   "name": "rideco_grocery_client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
   "devDependencies": {
     "react-scripts": "2.1.1"
   },
