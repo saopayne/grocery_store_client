@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
+import {store} from './_helpers/store'
+import { groceryActions } from '../src/_actions';
+
 
 class GroceryItem extends Component {
     render() {
@@ -10,10 +13,10 @@ class GroceryItem extends Component {
                 <p className="grocery-quantity">Quantity: <b>{this.props.item.quantity}</b></p>
                 <p className="grocery-unit">Unit: <b>{this.props.item.unit}</b></p>
                 <button className="edit"
-                    onClick={()=>this.props.dispatch({type:'EDIT_GROCERY',id:this.props.item.id})}>Edit
+                    onClick={()=>store.dispatch({type:'EDIT_GROCERY',id:this.props.item.id})}>Edit
                 </button>
                 <button className="delete"
-                    onClick={()=>this.props.dispatch({type:'DELETE_GROCERY',id:this.props.item.id})}>Delete
+                    onClick={()=>store.dispatch(groceryActions.delete(this.props.item.id))}>Delete
                 </button>
             </div>
         );

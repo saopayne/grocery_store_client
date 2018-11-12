@@ -4,9 +4,12 @@ const groceryReducer = (state = [], action) => {
         case 'ADD_GROCERY':
             return state.concat([action.data]);
         case 'EDIT_GROCERY':
-            return state.map((item)=>item.id === action.id ? {...item,editing:!item.editing}:item);
+            return state.map((item)=>item.id === action.id ? {...item, editing:!item.editing}:item);
         case 'DELETE_GROCERY':
             return state.filter((item)=>item.id !== action.id);
+        case 'GET_ALL':
+            return action.items;
+            // return state.concat([action.items]);
         case 'UPDATE_GROCERY':
             return state.map((item)=>{
                 if(item.id === action.id) {

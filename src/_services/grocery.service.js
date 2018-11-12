@@ -1,6 +1,5 @@
 export const groceryService = {
     add,
-    logout,
     register,
     getAll,
     getById,
@@ -15,31 +14,14 @@ function add(name, quantity, unit) {
         body: JSON.stringify({ name, quantity, unit })
     };
 
-    return fetch(`http://127.0.0.1:5000/grocerylists/1/items/`, requestOptions)
+    return fetch(`https://guarded-brook-31463.herokuapp.com/grocerylists/1/items/`, requestOptions)
         .then(handleResponse)
         .then(item => {
             if (item.token) {
                 localStorage.setItem('groceryItem', JSON.stringify(item));
             }
-
             return item;
         });
-}
-
-function getAll() {
-    const requestOptions = {
-        method: 'GET'
-    };
-
-    return fetch(`/grocerylists/1/items/`, requestOptions).then(handleResponse);
-}
-
-function getById(id) {
-    const requestOptions = {
-        method: 'GET'
-    };
-
-    return fetch(`/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
 }
 
 function update(item) {
@@ -49,7 +31,26 @@ function update(item) {
         body: JSON.stringify(item)
     };
 
-    return fetch(`/grocerylists/1/items/${item.id}`, requestOptions).then(handleResponse);;
+    return fetch(`https://guarded-brook-31463.herokuapp.com/grocerylists/1/items/${item.id}`, requestOptions)
+        .then(handleResponse);
+}
+
+function getAll() {
+    const requestOptions = {
+        method: 'GET'
+    };
+
+    return fetch(`https://guarded-brook-31463.herokuapp.com/grocerylists/1/items/`, requestOptions)
+        .then(handleResponse);
+}
+
+function getById(id) {
+    const requestOptions = {
+        method: 'GET',
+        mode: 'no-cors'
+    };
+
+    return fetch(`https://guarded-brook-31463.herokuapp.com/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
 }
 
 // prefixed function name with underscore because delete is a reserved word in javascript
@@ -58,12 +59,7 @@ function _delete(id) {
         method: 'DELETE'
     };
 
-    return fetch(`/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
-}
-
-function logout() {
-    // remove user from local storage to log user out
-    localStorage.removeItem('user');
+    return fetch(`https://guarded-brook-31463.herokuapp.com/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
 }
 
 function register(user) {
@@ -73,7 +69,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`/users/register`, requestOptions).then(handleResponse);
+    return fetch(`https://guarded-brook-31463.herokuapp.com/users/register`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {
@@ -82,8 +78,7 @@ function handleResponse(response) {
         if (!response.ok) {
             if (response.status === 401) {
                 // auto logout if 401 response returned from api
-                logout();
-                // location.reload(true);
+                window.location.reload(true);
             }
 
             const error = (data && data.message) || response.statusText;

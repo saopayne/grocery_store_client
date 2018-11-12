@@ -5,7 +5,6 @@ export const userService = {
     logout,
     register,
     getAll,
-    getById,
     update,
     delete: _delete
 };
@@ -17,7 +16,7 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`/users/authenticate`, requestOptions)
+    return fetch(`https://guarded-brook-31463.herokuapp.com/users/authenticate`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
@@ -41,16 +40,8 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch(`/users`, requestOptions).then(handleResponse);
-}
-
-function getById(id) {
-    const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
-    };
-
-    return fetch(`/users/${id}`, requestOptions).then(handleResponse);
+    return fetch(`https://guarded-brook-31463.herokuapp.com/users`, requestOptions)
+        .then(handleResponse);
 }
 
 function register(user) {
@@ -60,7 +51,8 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`/users/register`, requestOptions).then(handleResponse);
+    return fetch(`https://guarded-brook-31463.herokuapp.com/users/register`, requestOptions)
+        .then(handleResponse);
 }
 
 function update(user) {
@@ -70,17 +62,18 @@ function update(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`/users/${user.id}`, requestOptions).then(handleResponse);;
+    return fetch(`https://guarded-brook-31463.herokuapp.com/users/${user.id}`, requestOptions)
+        .then(handleResponse);
 }
 
-// prefixed function name with underscore because delete is a reserved word in javascript
 function _delete(id) {
     const requestOptions = {
         method: 'DELETE',
         headers: authHeader()
     };
 
-    return fetch(`/users/${id}`, requestOptions).then(handleResponse);
+    return fetch(`https://guarded-brook-31463.herokuapp.com/users/${id}`, requestOptions)
+        .then(handleResponse);
 }
 
 function handleResponse(response) {

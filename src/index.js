@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import LoginApp from '../src/App/App';
+import {store} from './_helpers/store'
 
-import groceryReducer from './reducers/grocery.reducer';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-const store = createStore(groceryReducer);
+const newStore = store;
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={newStore}>
     <App />
     </Provider>, document.getElementById('root'));
