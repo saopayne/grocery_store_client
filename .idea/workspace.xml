@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="734b53c6-edf3-41c1-aff1-70ee991c9a72" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GroceryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroceryItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GroceryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroceryList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/grocery.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/grocery.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/user.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/user.constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/grocery.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/grocery.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/user.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/grocery.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/grocery.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,8 +83,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="75">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -164,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/_helpers/store.js" />
         <option value="$PROJECT_DIR$/src/GroceryForm.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/_constants/user.constants.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/GroceryList.js" />
@@ -175,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/_actions/grocery.actions.js" />
         <option value="$PROJECT_DIR$/src/_services/user.service.js" />
         <option value="$PROJECT_DIR$/src/_services/grocery.service.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -300,15 +292,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541916759866</updated>
-      <workItem from="1541916762032" duration="28131000" />
+      <workItem from="1541916762032" duration="28770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28131000" />
+    <option name="totallyTimeSpent" value="28770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18630952" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -598,8 +591,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="75">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
         </state>
       </provider>
     </entry>
