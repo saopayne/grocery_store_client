@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="734b53c6-edf3-41c1-aff1-70ee991c9a72" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/grocery.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/grocery.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/user.service.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -168,9 +165,6 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/package.json" />
@@ -284,12 +278,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541916759866</updated>
       <workItem from="1541916762032" duration="30190000" />
-      <workItem from="1542088619961" duration="860000" />
+      <workItem from="1542088619961" duration="1273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31050000" />
+    <option name="totallyTimeSpent" value="31463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
