@@ -14,7 +14,7 @@ function add(name, quantity, unit) {
         body: JSON.stringify({ name, quantity, unit })
     };
 
-    return fetch(`http://127.0.0.1:5000/grocerylists/1/items/`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/grocerylists/1/items/`, requestOptions)
         .then(handleResponse)
         .then(item => {
             if (item.token) {
@@ -31,7 +31,7 @@ function update(item) {
         body: JSON.stringify(item)
     };
 
-    return fetch(`http://127.0.0.1:5000/grocerylists/1/items/${item.id}`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/grocerylists/1/items/${item.id}`, requestOptions)
         .then(handleResponse);
 }
 
@@ -40,7 +40,7 @@ function getAll() {
         method: 'GET'
     };
 
-    return fetch(`http://127.0.0.1:5000/grocerylists/1/items/`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/grocerylists/1/items/`, requestOptions)
         .then(handleResponse);
 }
 
@@ -50,7 +50,7 @@ function getById(id) {
         mode: 'no-cors'
     };
 
-    return fetch(`http://127.0.0.1:5000/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
+    return fetch(`https://vast-retreat-46332.herokuapp.com/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
 }
 
 // prefixed function name with underscore because delete is a reserved word in javascript
@@ -59,7 +59,7 @@ function _delete(id) {
         method: 'DELETE',
     };
 
-    return fetch(`http://127.0.0.1:5000/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
+    return fetch(`https://vast-retreat-46332.herokuapp.com/grocerylists/1/items/${id}`, requestOptions).then(handleResponse);
 }
 
 function register(user) {
@@ -69,7 +69,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`http://127.0.0.1:5000/users/register`, requestOptions).then(handleResponse);
+    return fetch(`https://vast-retreat-46332.herokuapp.com/users/register`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

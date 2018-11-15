@@ -16,7 +16,7 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`http://127.0.0.1:5000/users/authenticate`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/users/authenticate`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
@@ -40,7 +40,7 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch(`http://127.0.0.1:5000/users`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/users`, requestOptions)
         .then(handleResponse);
 }
 
@@ -51,7 +51,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`http://127.0.0.1:5000/users/register`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/users/register`, requestOptions)
         .then(handleResponse);
 }
 
@@ -62,7 +62,7 @@ function update(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`http://127.0.0.1:5000/users/${user.id}`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/users/${user.id}`, requestOptions)
         .then(handleResponse);
 }
 
@@ -72,7 +72,7 @@ function _delete(id) {
         headers: authHeader()
     };
 
-    return fetch(`http://127.0.0.1:5000/users/${id}`, requestOptions)
+    return fetch(`https://vast-retreat-46332.herokuapp.com/users/${id}`, requestOptions)
         .then(handleResponse);
 }
 
