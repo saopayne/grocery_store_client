@@ -16,7 +16,7 @@ class GroceryList extends Component {
     render() {
         return (
             <div>
-                <h1 className="grocery-list-heading"> All your groceries </h1>s
+                <h1 className="grocery-list-heading"> All your groceries </h1>
                 {this.props.groceryList.groceryReducer.map((item) => (
                     <div key={item.id}>
                         {item.editing ? <EditComponent item={item} key={item.id} /> :
