@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#### Summary
+
+This is the web client to consume the API here: https://github.com/saopayne/grocery_store_api
+
+Demo URL: https://rideco-grocery-client.firebaseapp.com
 
 ## Available Scripts
 
